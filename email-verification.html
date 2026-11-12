@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification | Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<div class="page-loader"><div class="loader-content"><div class="loader-logo"></div><p>FINANCE</p></div></div>
+<main class="auth-shell">
+    <section class="auth-visual animate-in">
+        <a class="brand" href="login.html"><span class="brand-mark">F</span> Finance</a>
+        <div class="visual-copy"><span class="visual-tag">ONE MORE STEP</span><h1>Verify Your Email Address</h1><p>We want to make sure your account is secure. Verify your email to continue.</p><div class="visual-art"></div></div>
+        <p class="visual-foot">© 2026 Finance. All rights reserved.</p>
+    </section>
+    <section class="auth-panel">
+        <div class="auth-card animate-in delay-1">
+            <div class="auth-top"><a class="brand" href="login.html"><span class="brand-mark">F</span> Finance</a><p>Need help? <a href="signup.html">Sign Up</a></p></div>
+            <div class="auth-heading"><h2>Verify Your Email</h2><p>Enter the 6-digit verification code to verify your email address.</p></div>
+            <form id="verifyForm">
+                <label style="font-size:13px;font-weight:600">Verification Code</label>
+                <div class="code-inputs">
+                    <input type="text" maxlength="1" inputmode="numeric" aria-label="Digit 1" required>
+                    <input type="text" maxlength="1" inputmode="numeric" aria-label="Digit 2" required>
+                    <input type="text" maxlength="1" inputmode="numeric" aria-label="Digit 3" required>
+                    <input type="text" maxlength="1" inputmode="numeric" aria-label="Digit 4" required>
+                    <input type="text" maxlength="1" inputmode="numeric" aria-label="Digit 5" required>
+                    <input type="text" maxlength="1" inputmode="numeric" aria-label="Digit 6" required>
+                </div>
+                <button class="primary-btn" type="submit">Verify Email</button>
+                <p class="form-message" aria-live="polite"></p>
+            </form>
+            <p class="auth-bottom">Didn't receive the code? <a href="#" data-resend-code>Resend Code</a><br><br><a href="signup.html">Back to Sign Up</a></p>
+        </div>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<div class="page-loader"><div class="loader-content"><div class="loader-logo"></div><p>FINANCE</p></div></div>
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <a class="brand" href="dashboard.html"><span class="brand-mark">F</span> Finance</a>
+        <p class="sidebar-label">MENU</p>
+        <nav class="side-nav">
+            <a href="dashboard.html">▦ <span>Dashboard</span></a>
+            <a href="profile.html" class="active">♙ <span>My Profile</span></a>
+        </nav>
+        <div class="side-bottom">
+            <p class="sidebar-label">ACCOUNT</p>
+            <nav class="side-nav">
+                <a href="profile.html">⚙ <span>Settings</span></a>
+                <a href="#" data-logout>↪ <span>Log Out</span></a>
+            </nav>
+            <p class="visual-foot" style="padding:20px 10px 0">© 2026 Finance</p>
+        </div>
+    </aside>
+    <main class="dashboard-main">
+        <header class="topbar">
+            <div style="display:flex;align-items:center;gap:12px">
+                <button class="mobile-menu" aria-label="Open menu">☰</button>
+                <div><h2>My Profile</h2><p>Manage your personal account information.</p></div>
+            </div>
+            <a class="user-chip" href="profile.html"><span class="avatar" data-user-initial>G</span><span data-user-name>Guest User</span></a>
+        </header>
+
+        <section class="content-card animate-in">
+            <div class="profile-banner">
+                <div class="avatar" data-user-initial>G</div>
+                <div><h2 style="font:800 20px Manrope" data-user-name>Guest User</h2><p style="font-size:12px;color:#999;margin-top:5px">Finance Account</p></div>
+            </div>
+            <div class="form-row" style="margin-bottom:20px"><h3 style="margin:0">Personal Information</h3><span class="visual-tag">PROFILE DETAILS</span></div>
+            <form id="profileForm">
+                <div class="profile-card">
+                    <div class="form-group"><label>Full Name</label><input class="form-control" name="fullName" type="text" required></div>
+                    <div class="form-group"><label>Email Address</label><input class="form-control" data-profile-email type="email" disabled></div>
+                    <div class="form-group"><label>Phone Number</label><input class="form-control" name="phone" type="tel" placeholder="Enter phone number"></div>
+                    <div class="form-group"><label>Account Status</label><input class="form-control" value="Active Account" disabled></div>
+                </div>
+                <p class="form-message" aria-live="polite"></p>
+                <button class="primary-btn" type="submit" style="max-width:190px">Save Changes</button>
+            </form>
+        </section>
+        <section class="content-card animate-in delay-1" style="margin-top:18px">
+            <h3>Account Details</h3>
+            <div class="profile-card">
+                <div class="profile-field"><small>Email Address</small><strong data-user-email>guest@example.com</strong></div>
+                <div class="profile-field"><small>Phone Number</small><strong data-user-phone>Not provided</strong></div>
+                <div class="profile-field"><small>Account Type</small><strong>Personal</strong></div>
+                <div class="profile-field"><small>Member Since</small><strong>New Member</strong></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    try {
+        const user = JSON.parse(localStorage.getItem("financeUser") || "null");
+        if (user) {
+            const name = document.querySelector('#profileForm [name="fullName"]');
+            const email = document.querySelector("[data-profile-email]");
+            const phone = document.querySelector('#profileForm [name="phone"]');
+            if (name) name.value = user.name || "";
+            if (email) email.value = user.email || "";
+            if (phone) phone.value = user.phone || "";
+        }
+    } catch (error) { console.error("Unable to load profile", error); }
+});
+</script>
+</body>
+</html>

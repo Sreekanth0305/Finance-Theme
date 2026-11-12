@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<div class="page-loader"><div class="loader-content"><div class="loader-logo"></div><p>FINANCE</p></div></div>
+<main class="auth-shell">
+    <section class="auth-visual animate-in">
+        <a class="brand" href="login.html"><span class="brand-mark">F</span> Finance</a>
+        <div class="visual-copy">
+            <span class="visual-tag">START YOUR JOURNEY</span>
+            <h1>Take Control of Your Finances</h1>
+            <p>Create your account and take the first step towards smarter financial management.</p>
+            <div class="visual-art"></div>
+        </div>
+        <p class="visual-foot">© 2026 Finance. All rights reserved.</p>
+    </section>
+    <section class="auth-panel">
+        <div class="auth-card animate-in delay-1">
+            <div class="auth-top"><a class="brand" href="login.html"><span class="brand-mark">F</span> Finance</a><p>Already have an account? <a href="login.html">Sign In</a></p></div>
+            <div class="auth-heading"><h2>Create Your Account</h2><p>Get started with Finance. Enter your details below.</p></div>
+            <form id="signupForm">
+                <div class="form-group"><label>Full Name</label><input class="form-control" type="text" name="fullName" placeholder="Enter your full name" required></div>
+                <div class="form-group"><label>Email Address</label><input class="form-control" type="email" name="email" placeholder="Enter your email address" required></div>
+                <div class="form-group"><label>Phone Number</label><input class="form-control" type="tel" name="phone" placeholder="Enter your phone number"></div>
+                <label class="check-row" style="margin:8px 0 20px"><input type="checkbox" name="terms" required> I agree to the Terms & Conditions and Privacy Policy.</label>
+                <button class="primary-btn" type="submit">Create Account</button>
+                <p class="form-message" aria-live="polite"></p>
+            </form>
+            <p class="auth-bottom">Already have an account? <a href="login.html">Sign In</a></p>
+        </div>
+    </section>
+</main>
+</body>
+</html>

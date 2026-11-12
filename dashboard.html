@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<div class="page-loader"><div class="loader-content"><div class="loader-logo"></div><p>FINANCE</p></div></div>
+<div class="dashboard-layout">
+    
+<aside class="sidebar">
+    <a class="brand" href="dashboard.html">
+        <span class="brand-mark">F</span> Finance
+    </a>
+
+    <p class="sidebar-label">MAIN MENU</p>
+
+    <nav class="side-nav">
+        <a href="dashboard.html" class="active">
+            ▦ <span>Dashboard</span>
+        </a>
+
+        <a href="#">
+            ⇄ <span>Transactions</span>
+        </a>
+
+        <a href="#">
+            ↗ <span>Income</span>
+        </a>
+
+        <a href="#">
+            ↘ <span>Expenses</span>
+        </a>
+
+        <a href="#">
+            ◷ <span>Budgets</span>
+        </a>
+
+        <a href="#">
+            ▤ <span>Invoices</span>
+        </a>
+
+        <a href="#">
+            ▥ <span>Reports</span>
+        </a>
+
+        <a href="#">
+            ◫ <span>Accounts</span>
+        </a>
+
+        <a href="#">
+            ⚙ <span>Settings</span>
+        </a>
+
+    </nav>
+
+    <div class="side-bottom">
+        <p class="sidebar-label">MANAGEMENT</p>
+
+        <nav class="side-nav">
+
+            <a href="profile.html">
+                ♙ <span>My Profile</span>
+            </a>
+
+            <a href="#" data-logout>
+                ↪ <span>Log Out</span>
+            </a>
+
+        </nav>
+
+        <p class="visual-foot" style="padding:20px 10px 0">
+            © 2026 Finance. All rights reserved.
+        </p>
+    </div>
+</aside>
+
+    <main class="dashboard-main">
+        <header class="topbar">
+            <div style="display:flex;align-items:center;gap:12px">
+                <button class="mobile-menu" aria-label="Open menu">☰</button>
+                <div><h2>Dashboard</h2><p data-current-date>Welcome to your finance overview</p></div>
+            </div>
+            <a class="user-chip" href="profile.html"><span class="avatar" data-user-initial>G</span><span data-user-name>Guest User</span></a>
+        </header>
+
+        <section class="animate-in">
+            <div style="margin-bottom:20px"><h2 style="font:800 22px Manrope">Hello, <span data-user-name>Guest User</span>!</h2><p style="font-size:13px;color:#888;margin-top:5px">Here's what's happening with your account today.</p></div>
+            <div class="dashboard-grid">
+                <article class="stat-card"><p>Total Balance</p><h3>₹2,45,800</h3><small>↑ 8.4% this month</small></article>
+                <article class="stat-card"><p>Total Income</p><h3>₹85,000</h3><small>↑ 5.2% this month</small></article>
+                <article class="stat-card"><p>Total Expenses</p><h3>₹32,450</h3><small style="color:#b66b50">↓ 2.1% this month</small></article>
+                <article class="stat-card"><p>Savings</p><h3>₹52,550</h3><small>↑ 12.6% this month</small></article>
+            </div>
+        </section>
+
+        <section class="content-grid animate-in delay-1">
+            <article class="content-card">
+                <h3>Financial Overview</h3>
+                <p style="font-size:11px;color:#999;margin-top:-10px;margin-bottom:10px">Monthly activity overview</p>
+                <div class="chart" aria-label="Illustrative monthly chart">
+                    <span style="height:40%"></span><span style="height:58%"></span><span style="height:48%"></span><span style="height:72%"></span><span style="height:60%"></span><span style="height:85%"></span><span style="height:66%"></span><span style="height:95%"></span><span style="height:75%"></span><span style="height:88%"></span><span style="height:70%"></span><span style="height:100%"></span>
+                </div>
+                <div class="form-row" style="margin-top:12px;color:#999;font-size:10px"><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Dec</span></div>
+            </article>
+            <article class="content-card">
+                <h3>Recent Transactions</h3>
+                <div class="transaction"><div><strong>Salary Credit</strong><small>Today · Income</small></div><b style="color:#37845c">+₹45,000</b></div>
+                <div class="transaction"><div><strong>Shopping</strong><small>Yesterday · Expense</small></div><b>-₹3,500</b></div>
+                <div class="transaction"><div><strong>Electricity Bill</strong><small>12 Nov · Utilities</small></div><b>-₹1,250</b></div>
+                <div class="transaction"><div><strong>Freelance Work</strong><small>10 Nov · Income</small></div><b style="color:#37845c">+₹8,000</b></div>
+                <div class="transaction"><div><strong>Groceries</strong><small>08 Nov · Expense</small></div><b>-₹2,100</b></div>
+            </article>
+        </section>
+
+        <section class="content-card animate-in delay-2" style="margin-top:17px">
+            <div class="form-row"><h3 style="margin:0">Account Information</h3><a class="text-link" href="profile.html">View Profile →</a></div>
+            <div class="profile-card">
+                <div class="profile-field"><small>Full Name</small><strong data-user-name>Guest User</strong></div>
+                <div class="profile-field"><small>Email Address</small><strong data-user-email>guest@example.com</strong></div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
